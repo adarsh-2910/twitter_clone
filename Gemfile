@@ -53,6 +53,11 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
 
+gem 'bulma-rails', '~> 0.9.3'
+gem 'simple_form', '~> 5.1'
+gem 'gravatar_image_tag', '~> 1.2'
+gem 'devise', '~> 4.8', '>= 4.8.1'
+
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
@@ -62,6 +67,10 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+gem 'better_errors', '~> 2.9', '>= 2.9.1'
+gem 'guard', '~> 2.18'
+gem 'guard-livereload', '~> 2.5', '>= 2.5.2' , require: false  
 end
 
 group :test do
