@@ -4,6 +4,7 @@ class TwitsController < ApplicationController
   # GET /twits or /twits.json
   def index
     @twits = Twit.all.order("created_at DESC")
+    @twit = Twit.new
   end
 
   # GET /twits/1 or /twits/1.json
