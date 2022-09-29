@@ -23,8 +23,9 @@
             </div>
             <div class= "media-content">
                 <div class= "content">
-                    <strong>Adarsh Shrivastav</strong><br/>
-                    <small>@adarsh.s</small><br/> 
+                    <strong><%= current_user.name %></strong><br/>
+                    <small><%= current_user.email %></small><br/> 
+
                     <p><%= twit.twit %></p> 
                 </div> 
                 <nav class= "level">
