@@ -272,7 +272,11 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-
+  # config.omniauth :google_oauth2, Rails.application.credentials.dig(:google, :google_client_id),
+  # Rails.application.credentials.dig(:google, :google_client_secret), scope: 'userinfo.email,userinfo.profile' 
+  config.omniauth :google_oauth2, '55489487590-urrg8lcbua01hbgakcg2ak104tnd136g.apps.googleusercontent.com', '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'
+  # config.omniauth :google_oauth2, '55489487590-urrg8lcbua01hbgakcg2ak104tnd136g.apps.googleusercontent.com
+  # ', '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', scope: 'userinfo.email,userinfo.profile', skip_jwt: true
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
@@ -310,4 +314,5 @@ Devise.setup do |config|
   # config.sign_in_after_change_password = true
 
   config.navigational_formats = ['*/*', :html, :turbo_stream]
+  OmniAuth.config.allowed_request_methods = [:get, :post]
 end
