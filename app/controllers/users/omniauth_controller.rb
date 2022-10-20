@@ -16,3 +16,4 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
   
+# omniauth_callbacks_controller.rb
