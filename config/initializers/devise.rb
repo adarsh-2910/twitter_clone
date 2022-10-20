@@ -274,7 +274,8 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
   # config.omniauth :google_oauth2, Rails.application.credentials.dig(:google, :google_client_id),
   # Rails.application.credentials.dig(:google, :google_client_secret), scope: 'userinfo.email,userinfo.profile' 
-  config.omniauth :google_oauth2, '55489487590-urrg8lcbua01hbgakcg2ak104tnd136g.apps.googleusercontent.com', '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'
+  # config.omniauth :google_oauth2, '55489487590-urrg8lcbua01hbgakcg2ak104tnd136g.apps.googleusercontent.com', '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'
+  config.omniauth :google_oauth2, '55489487590-urrg8lcbua01hbgakcg2ak104tnd136g.apps.googleusercontent.com', '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',{:client_options => {:ssl => {:ca_path => '/etc/ssl/certs'}}}
   # config.omniauth :google_oauth2, '55489487590-urrg8lcbua01hbgakcg2ak104tnd136g.apps.googleusercontent.com
   # ', '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', scope: 'userinfo.email,userinfo.profile', skip_jwt: true
   # ==> Warden configuration
