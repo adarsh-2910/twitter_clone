@@ -1,0 +1,12 @@
+<%# <%= form_for @user, :html => {:multipart => true} do |f| %> 
+<%# <%= form_with(model: @user, url: update_profile_user_path(@user), method: "patch") do |f|  
+<%# <%= f.error_messages %> 
+<%= form_with(model: @user, method: "patch") do |f| %>
+<%= f.label :username %><br />
+<%= f.text_field :username %>
+</p>
+<p>
+<%= f.file_field :image %>
+</p>
+<p><%=link_to f.submit, new_twit_path %></p>
+<% end %>
