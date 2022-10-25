@@ -4,7 +4,6 @@ class UsersController < ApplicationController
       
         # GET /users or /users.json
         def index
-          @users = User.all
         end
       
         # GET /users/1 or /users/1.json
@@ -74,9 +73,9 @@ class UsersController < ApplicationController
           end
       
           # Only allow a list of trusted parameters through.
-          # def user_params
-          #   params.require(:image)
-          # end
+          def user_params
+            params.require(:user).permit(:image)
+          end
       
       
 end    
